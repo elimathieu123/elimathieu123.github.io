@@ -2259,6 +2259,7 @@ strong {
   }
 }
 .footer .wrapper .centre h2 {
+  min-width: 400px;
   font-family: "Paytone One", sans-serif;
   font-size: var(--logo-font);
 }
@@ -2370,6 +2371,11 @@ a:hover {
 .slide-hover p {
   max-height: 520px;
   max-width: 100%;
+}
+@media only screen and (max-width: 460px) {
+  .slide-hover p {
+    max-width: 200px;
+  }
 }
 .slide-hover {
   padding: 40px;
