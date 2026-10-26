@@ -47,6 +47,7 @@
   --font-size-h1: clamp(3rem, 4.38vw + 1.69rem, 5.63rem);
   --logo-font: 36px;
   --font-size-h2: clamp(2rem, 1.67vw + 1.5rem, 3rem);
+  --font-size-h3: clamp(1.13rem, 1.04vw + 0.81rem, 1.75rem);
 }
 
 /* ==========================================================================
@@ -1534,6 +1535,16 @@ strong {
   font-family: "Fira Sans Extra Condensed", sans-serif;
   font-size: 26px;
 }
+@media only screen and (max-width: 900px) {
+  .card {
+    padding: 63px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .card {
+    padding: 33px;
+  }
+}
 
 .item1 {
   background: linear-gradient(180deg, rgb(121, 50, 153), rgb(40, 17, 51));
@@ -1565,6 +1576,12 @@ strong {
   -o-object-fit: cover;
      object-fit: cover;
   aspect-ratio: 1/1;
+}
+
+@media only screen and (max-width: 423px) {
+  .item2 .card_content {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -1613,6 +1630,8 @@ strong {
 
 .item6 ul {
   list-style: decimal-leading-zero;
+  list-style-position: inside;
+  padding: 0;
 }
 
 .item7 {
@@ -1691,6 +1710,7 @@ strong {
 @media only screen and (max-width: 900px) {
   .hero .hero_content {
     position: static;
+    align-self: flex-start;
   }
 }
 
@@ -1715,6 +1735,7 @@ strong {
 
 .hero_background {
   position: fixed;
+  overflow: clip;
   top: 0;
   left: 0;
   width: 100%;
@@ -1855,9 +1876,9 @@ strong {
 }
 
 .header__toggle {
-  --bar-height: 8px;
-  --bar-width: 50px;
-  --bar-spacer: 6px;
+  --bar-height: 5px;
+  --bar-width: 30px;
+  --bar-spacer: 5px;
   background-color: transparent;
   border: none;
   outline: none;
@@ -1869,9 +1890,10 @@ strong {
   z-index: 10;
 }
 .header__toggle span {
-  background: var(--color-white);
-  border-radius: 3px;
-  height: 8px;
+  background: var(--secondary-color);
+  border-radius: 0px;
+  border: 1px solid var(--accent-color);
+  height: 5px;
   width: 100%;
   position: absolute;
   top: calc(50% - var(--bar-height) / 2);
@@ -1925,7 +1947,7 @@ strong {
   justify-content: center;
   flex-direction: row;
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1024px) {
   .nav__menu {
     flex-direction: column;
     gap: 83px;
@@ -2038,6 +2060,7 @@ strong {
   text-align: center;
 }
 .valeurs .wrapper ul {
+  margin-top: 53px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2053,8 +2076,13 @@ strong {
   padding: 0;
 }
 .valeurs .wrapper ul li {
-  font-size: 28px;
+  font-size: 24px;
   color: var(--accent-color);
+}
+
+.phrase_accroche .sous-titre {
+  padding-right: 24px;
+  padding-left: 24px;
 }
 
 /* ==========================================================================
@@ -2064,8 +2092,7 @@ strong {
   color: var(--color-white);
   text-align: center;
   padding: 0;
-  aspect-ratio: 1/0.45;
-  min-height: 300px;
+  aspect-ratio: 2/1;
   height: 100%;
   margin-top: var(--spacing-md);
   display: flex;
@@ -2102,6 +2129,8 @@ strong {
 }
 .section--full .wrapper .video {
   overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
   width: 100%;
 }
@@ -2111,6 +2140,12 @@ strong {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media only screen and (max-width: 760px) {
+  .section--full .wrapper .video .play {
+    height: 60px;
+    width: 60px;
+  }
 }
 .section--full .wrapper .video .icon {
   color: var(--accent-color);
