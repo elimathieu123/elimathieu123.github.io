@@ -2183,7 +2183,7 @@ strong {
 .footer {
   background-color: var(--color-black);
   padding: 83px 0;
-  padding-bottom: 24px;
+ 
 }
 @media only screen and (max-width: 900px) {
   .footer {
@@ -2206,6 +2206,7 @@ strong {
 }
 .footer .wrapper p {
   max-width: 303px;
+  margin-bottom: 0;
 }
 .footer .wrapper .gauche {
   display: flex;
