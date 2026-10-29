@@ -2195,6 +2195,10 @@ strong {
   display: flex;
   align-items: start;
   justify-content: space-between;
+  
+}
+.footer h2{
+  margin-top: 53px;
 }
 @media only screen and (max-width: 900px) {
   .footer .wrapper {
