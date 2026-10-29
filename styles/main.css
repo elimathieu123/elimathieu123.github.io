@@ -2197,9 +2197,10 @@ strong {
   justify-content: space-between;
   
 }
-.footer h2{
+@media only screen and (max-width: 900px) {
+  .footer h2{
   margin-top: 53px;
-}
+}}
 @media only screen and (max-width: 900px) {
   .footer .wrapper {
     flex-direction: column;
