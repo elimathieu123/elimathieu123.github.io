@@ -2460,3 +2460,9 @@ a:hover {
   transform: scale(1);
 }
 /*# sourceMappingURL=main.css.map */
+/*====================
+---------404-----
+=====================*/
+.non_trouve{
+height: 100vh;
+}
