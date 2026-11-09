@@ -2468,3 +2468,25 @@ a:hover {
 .non_trouve{
 height: 60vh;
 }
+@media only screen and (max-width: 900px) {
+  /* Footer : annule les largeurs minimales qui dépassent de l'écran */
+  .footer .wrapper .centre h2,
+  .footer .wrapper .centre p {
+    min-width: 0;
+  }
+
+  /* Animations : plus de décalage horizontal sur mobile */
+  .has-js [data-scrolly=fromLeft],
+  .has-js [data-scrolly=fromRight] {
+    transform: translateY(30px);
+  }
+  .has-js [data-scrolly=fromLeft].is-active,
+  .has-js [data-scrolly=fromRight].is-active {
+    transform: translateY(0);
+  }
+}
+
+/* Filet de sécurité, surtout pour Safari iOS */
+html {
+  overflow-x: clip;
+}
