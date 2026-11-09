@@ -2468,25 +2468,50 @@ a:hover {
 .non_trouve{
 height: 60vh;
 }
-@media only screen and (max-width: 900px) {
-  /* Footer : annule les largeurs minimales qui dépassent de l'écran */
-  .footer .wrapper .centre h2,
-  .footer .wrapper .centre p {
-    min-width: 0;
-  }
-
-  /* Animations : plus de décalage horizontal sur mobile */
-  .has-js [data-scrolly=fromLeft],
-  .has-js [data-scrolly=fromRight] {
-    transform: translateY(30px);
-  }
-  .has-js [data-scrolly=fromLeft].is-active,
-  .has-js [data-scrolly=fromRight].is-active {
-    transform: translateY(0);
-  }
+@media only screen and (max-width: 460px) {
+  .has-js [data-scrolly=fromBottom] {
+  opacity: 0;
+  transform: translateY(0px);
+  transition: all 0.2s ease-in;
 }
-
-/* Filet de sécurité, surtout pour Safari iOS */
-html {
-  overflow-x: clip;
+.has-js [data-scrolly=fromBottom].is-active {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.has-js [data-scrolly=fromLeft] {
+  opacity: 0;
+  transform: translateX(0px);
+  transition: all 0.6s ease-out;
+}
+.has-js [data-scrolly=fromLeft].is-active {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.has-js [data-scrolly=fromRight] {
+  opacity: 0;
+  transform: translateX(0px);
+  transition: all 0.6s ease-out;
+}
+.has-js [data-scrolly=fromRight].is-active {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.has-js [data-scrolly=flipFromBottom] {
+  opacity: 0;
+  transform: rotate(0);
+  transition: all 0.4s ease-in;
+}
+.has-js [data-scrolly=flipFromBottom].is-active {
+  opacity: 1;
+  transform: rotate(360deg);
+}
+.has-js [data-scrolly=moveTitle] {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.4s ease-out;
+}
+.has-js [data-scrolly=moveTitle].is-active {
+  opacity: 1;
+  transform: scale(1);
+}
 }
